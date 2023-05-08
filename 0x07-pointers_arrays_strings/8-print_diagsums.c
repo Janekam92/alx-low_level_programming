@@ -12,6 +12,7 @@
 void print_diagsums(int *a, int size)
 {
 	int mat1, mat2, j;
+
 	mat1 = 0;
 	mat2 = 0;
 
@@ -20,6 +21,8 @@ void print_diagsums(int *a, int size)
 		mat1 = mat1 + a[j * size + j];
 	}
 	for (j = size - 1; j >= 0; j--)
-		mat2 += a[j * size + (size - j -1)];
+	{
+		mat2 += a[j * size + (size - j - 1)];
+	}
 	printf("%d, %d\n", mat1, mat2);
 }
